@@ -1,11 +1,14 @@
 Favorite.destroy_all
-User.destroy_all
-
 Review.destroy_all
+Post.destroy_all
+User.destroy_all
 Festival.destroy_all
 
 
 connor = User.create(username: "Connor", password_digest: "111", email: "mulhollandconnor@icloud.com")
+jallen = User.create(username: "Jallen", password_digest: "123", email: "jallen@jallen.com")
+sara = User.create(username: "Sara", password_digest: "123", email: "sara@sara.com")
+bryn = User.create(username: "Bryn", password_digest: "123", email: "bryn@bryn.com")
 
 coachella = Festival.create(name: "Coachella", dates: ["04/10/2020", "04/12/2020"], image: "/imgs/coachella.jpeg", city: "Indio, CA")
 bonnaroo = Festival.create(name: "Bonnaroo", dates: ["06/11/2020", "06/14/2020"], image: "/imgs/bonnaroo.jpg", city: "Manchester, TN")
@@ -18,7 +21,7 @@ sxsw = Festival.create(name: "SXSW", dates: ["03/13/2020", "03/22/2020"], image:
 pitchfork = Festival.create(name: "Pitchfork", dates: ["07/17/2020", "07/19/2020"], image: "/imgs/pitchfork.jpeg", city: "Los Angeles, CA")
 acl = Festival.create(name: "Austin City Limits", dates: ["10/04/2019", "10/06/2019"], image: "/imgs/acl.jpg", city: "Ausin, TX")
 ultra = Festival.create(name: "Ultra Music Festival", dates: ["03/20/2020", "03/22/2020"], image: "/imgs/ultra.jpg", city: "Miami, FL")
-new_orleans_jazz = Festival.create(name: "New Orleans Jazz & Heritage Festival", dates: ["04/23/2020", "05/03/2020"], image: "/imgs/orleans.jpeg", city: "New Orleans, MY")
+new_orleans_jazz = Festival.create(name: "New Orleans Jazz Fest", dates: ["04/23/2020", "05/03/2020"], image: "/imgs/orleans.jpeg", city: "New Orleans, MY")
 electric_zoo = Festival.create(name: "Electric Zoo", dates: ["08/30/2019", "09/01/2020"], image: "/imgs/ezoo.jpg", city: "New York, NY")
 electric_forest = Festival.create(name: "Electric Forest", dates: ["06/25/2020", "06/28/2020"], image: "/imgs/forest.jpg", city: "Rothbury, MI")
 burning_man = Festival.create(name: "Burning Man", dates: ["08/30/2020" "09/06/2020"], image: "/imgs/burning.jpg", city: "Black Rock Desert, NV")
@@ -43,3 +46,14 @@ camp_bisco = Festival.create(name: "Camp Bisco", dates: ["07/09/2020", "07/11/20
 okeechobee = Festival.create(name: "Okeechobee", dates: ["03/05/2020", "03/08/2020"], image: "/imgs/okee.png", city: "Sunshine Grove, FL")
 
 r1 = Review.create(stars: 5, content: "Coachella changed my life!", user: connor, festival: coachella)
+
+p1 = Post.create(image: '/imgs/festfriend1.jpeg', user: connor, festival: firefly)
+p2 = Post.create(image: '/imgs/festfriend2.jpeg', user: jallen, festival: boston_calling)
+p3 = Post.create(image: '/imgs/festfriend3.jpeg', user: sara, festival: bonnaroo)
+p4 = Post.create(image: '/imgs/festfriend4.jpeg', user: bryn, festival: outside_lands)
+p5 = Post.create(image: '/imgs/festfriend5.jpeg', user: connor, festival: okeechobee)
+p6 = Post.create(image: '/imgs/festfriend6.jpeg', user: connor, festival: coachella)
+p7 = Post.create(image: '/imgs/festfriend7.jpeg', user: jallen, festival: coachella)
+p8 = Post.create(image: '/imgs/festfriend8.jpeg', user: sara, festival: governors_ball)
+p9 = Post.create(image: '/imgs/festfriend9.jpeg', user: bryn, festival: beyond_wonderland)
+p10 = Post.create(image: '/imgs/festfriend10.jpeg', user: jallen, festival: acl)
