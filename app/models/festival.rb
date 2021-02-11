@@ -2,6 +2,7 @@ class Festival < ApplicationRecord
  has_many :favorites
  has_many :reviews
  has_many :users, through: :comments
+ has_many :posts
 
     def average_star_rating
         if self.reviews.length > 0

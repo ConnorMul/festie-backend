@@ -43,3 +43,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'active_model_serializers'
 
 gem 'pg'
+
+gem 'cloudinary'
+
+gem 'jwt'
+

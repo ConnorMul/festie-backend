@@ -5,10 +5,16 @@ User.destroy_all
 Festival.destroy_all
 
 
-connor = User.create(username: "Connor", password_digest: "111", email: "mulhollandconnor@icloud.com")
-jallen = User.create(username: "Jallen", password_digest: "123", email: "jallen@jallen.com")
-sara = User.create(username: "Sara", password_digest: "123", email: "sara@sara.com")
-bryn = User.create(username: "Bryn", password_digest: "123", email: "bryn@bryn.com")
+connor = User.create(username: "Connor", password_digest: "111", email: "mulhollandconnor@icloud.com", avatar: "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/122036015_10158658736572485_6448500048244084885_n.jpg?_nc_cat=100&ccb=3&_nc_sid=09cbfe&_nc_ohc=kRZpjxmTh8YAX8Ee67R&_nc_ht=scontent-lga3-1.xx&oh=02084c68d0cc605e86e650905d3d5f5c&oe=6049500D")
+jallen = User.create(username: "Jallen", password_digest: "123", email: "jallen@jallen.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-UMHV8TFL4-1fc4bd7f93ae-512")
+sara = User.create(username: "Sara", password_digest: "123", email: "sara@sara.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U01CM04C6ET-9d354b4dadd0-512")
+bryn = User.create(username: "Bryn", password_digest: "123", email: "bryn@bryn.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U019BJ3Q405-29cfa30d7174-512")
+annie = User.create(username: "Annie", password_digest: "123", email: "annie@annie.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-UQD06FQCR-9a4f8e24cee4-512")
+ian = User.create(username: "Ian", password_digest: "123", email: "ian@ian.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-UD54WDGFP-ca9e4fa7fa57-512")
+greg = User.create(username: "Greg", password_digest: "123", email: "greg@greg.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U8H2RA3C1-643c8ce562ef-512")
+michelle = User.create(username: "Michelle", password_digest: "123", email: "michelle@michelle.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U011WKXUXTK-5ce7733b96e2-512")
+
+
 
 coachella = Festival.create(name: "Coachella", dates: ["04/10/2020", "04/12/2020"], image: "/imgs/coachella.jpeg", city: "Indio, CA")
 bonnaroo = Festival.create(name: "Bonnaroo", dates: ["06/11/2020", "06/14/2020"], image: "/imgs/bonnaroo.jpg", city: "Manchester, TN")
