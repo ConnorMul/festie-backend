@@ -10,11 +10,18 @@ class PostsController < ApplicationController
         render json: post
     end
 
-    def create
-        image = Cloudinary::Uploader.upload(params[:image])
-        post = Post.create(post_params)
-        render json: post
-    end
+    def create 
+        if params[:image].instance_of?(String) || params[:image].nil?
+            post = Post.create!(post_params)
+            render json: post
+        else
+            imageUploaded = Cloudinary::Uploader.upload(params[:image])
+            post_params_new = post_params
+            post_params_new[:image] = imageUploaded["url"]
+            post = Post.create!(post_params_new)
+            render json: post
+        end
+    end 
 
     def update
         post = Post.find(params[:id])
@@ -33,7 +40,7 @@ class PostsController < ApplicationController
     private
 
     def post_params
-        params.permit(:image, :caption, :festival_id, :user_id, :user, :festival)
+        params.permit(:image, :caption, :festival_id, :user_id)
     end
 
 end

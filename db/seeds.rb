@@ -5,14 +5,14 @@ User.destroy_all
 Festival.destroy_all
 
 
-connor = User.create(username: "Connor", password_digest: "111", email: "mulhollandconnor@icloud.com", avatar: "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/122036015_10158658736572485_6448500048244084885_n.jpg?_nc_cat=100&ccb=3&_nc_sid=09cbfe&_nc_ohc=kRZpjxmTh8YAX8Ee67R&_nc_ht=scontent-lga3-1.xx&oh=02084c68d0cc605e86e650905d3d5f5c&oe=6049500D")
-jallen = User.create(username: "Jallen", password_digest: "123", email: "jallen@jallen.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-UMHV8TFL4-1fc4bd7f93ae-512")
-sara = User.create(username: "Sara", password_digest: "123", email: "sara@sara.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U01CM04C6ET-9d354b4dadd0-512")
-bryn = User.create(username: "Bryn", password_digest: "123", email: "bryn@bryn.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U019BJ3Q405-29cfa30d7174-512")
-annie = User.create(username: "Annie", password_digest: "123", email: "annie@annie.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-UQD06FQCR-9a4f8e24cee4-512")
-ian = User.create(username: "Ian", password_digest: "123", email: "ian@ian.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-UD54WDGFP-ca9e4fa7fa57-512")
-greg = User.create(username: "Greg", password_digest: "123", email: "greg@greg.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U8H2RA3C1-643c8ce562ef-512")
-michelle = User.create(username: "Michelle", password_digest: "123", email: "michelle@michelle.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U011WKXUXTK-5ce7733b96e2-512")
+connor = User.create(username: "Connor", password: "111", email: "mulhollandconnor@icloud.com", avatar: "https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/122036015_10158658736572485_6448500048244084885_n.jpg?_nc_cat=100&ccb=3&_nc_sid=09cbfe&_nc_ohc=kRZpjxmTh8YAX8Ee67R&_nc_ht=scontent-lga3-1.xx&oh=02084c68d0cc605e86e650905d3d5f5c&oe=6049500D")
+jallen = User.create(username: "Jallen", password: "123", email: "jallen@jallen.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-UMHV8TFL4-1fc4bd7f93ae-512")
+sara = User.create(username: "Sara", password: "123", email: "sara@sara.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U01CM04C6ET-9d354b4dadd0-512")
+bryn = User.create(username: "Bryn", password: "123", email: "bryn@bryn.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U019BJ3Q405-29cfa30d7174-512")
+annie = User.create(username: "Annie", password: "123", email: "annie@annie.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-UQD06FQCR-9a4f8e24cee4-512")
+ian = User.create(username: "Ian", password: "123", email: "ian@ian.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-UD54WDGFP-ca9e4fa7fa57-512")
+greg = User.create(username: "Greg", password: "123", email: "greg@greg.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U8H2RA3C1-643c8ce562ef-512")
+michelle = User.create(username: "Michelle", password: "123", email: "michelle@michelle.com", avatar: "https://ca.slack-edge.com/T02MD9XTF-U011WKXUXTK-5ce7733b96e2-512")
 
 
 
@@ -50,6 +50,24 @@ beyond_wonderland = Festival.create(name: "Beyond Wonderland", dates: ["03/20/20
 summerfest = Festival.create(name: "Summerfest", dates: ["06/26/2020", "06/30/2020"], image: "/imgs/summerfest.png", city: "Milwaukee, WI")
 camp_bisco = Festival.create(name: "Camp Bisco", dates: ["07/09/2020", "07/11/2020"], image: "/imgs/bisco.jpg", city: "Scranton, PA")
 okeechobee = Festival.create(name: "Okeechobee", dates: ["03/05/2020", "03/08/2020"], image: "/imgs/okee.png", city: "Sunshine Grove, FL")
+dreamstate = Festival.create(name: "Dreamstate SoCal", dates: ["11/19/2021", "11/20/2021"], image: '/imgs/dreamtstate.png', city: "San Bernadino, CA")
+groove = Festival.create(name: "Groove Cruise", dates: ["01/20/2022", "01/24/2022"], image: '/imgs/groove.jpg', city: "Orlando, FL")
+dirtybird = Festival.create(name: "DirtyBird Campout", dates: ["10/08/2021", "10/10/2021"], image: '/imgs/dirtybird.jpg', city: "Waterford, CA")
+hulaween = Festival.create(name: "Suwanee Hulaween", dates: ["10/28/2021", "10/31/2021"], image: '/imgs/hulaween.jpg', city: "Live Oak, FL")
+lockn = Festival.create(name: "Lockn' Festival", dates: ["10/01/2021", "10/03/2021"], image: '/imgs/lockn.jpg', city: "Arlington, VA")
+bluegrass = Festival.create(name: "Hardly Strictly Bluegrass", dates: ["10/01/2021", "10/03/2021"], image: '/imgs/bluegrass.jpg', city: "San Francisco, CA")
+ohana = Festival.create(name: "Ohana", dates: ["09/24/2021", "09/26/2021"], image: '/imgs/ohana.jpg', city: "Dana Point, CA")
+lost_lands = Festival.create(name: "Lost Lands", dates: ["09/24/2021", "09/26/2021"], image: '/imgs/lost.jpg', city: "Thornville, OH")
+music_midtown = Festival.create(name: "Music Midtown", dates: ["09/18/2021", "09/19/2021"], image: '/imgs/midtown.jpg', city: "Atlanta, GA")
+primavera = Festival.create(name: "Primavera Sound", dates: ["09/18/2021", "09/19/2021"], image: '/imgs/primavera.png', city: "Los Angeles, CA")
+nocturnal_wonderland = Festival.create(name: "Nocturnal Wonderland", dates: ["09/18/2021", "09/19/2021"], image: '/imgs/nocturnal.png', city: "San Bernadino, CA")
+riot_fest = Festival.create(name: "Riot Fest", dates: ["09/16/2021", "09/19/2021"], image: '/imgs/riot.jpg', city: "Chicago, IL")
+dancefestopia = Festival.create(name: "Dancefestopia", dates: ["09/09/2021", "09/12/2021"], image: '/imgs/dancefest.webp', city: "Kansas City, MO")
+made_in_america = Festival.create(name: "Made in America", dates: ["09/03/2021", "09/05/2021"], image: '/imgs/america.jpg', city: "Philadelphia, PA")
+das_energi = Festival.create(name: "Das Energi", dates: ["08/13/2021", "08/14/2021"], image: '/imgs/das.jpg', city: "Salt Lake City, UT")
+moonrise = Festival.create(name: "Moonrise", dates: ["08/06/2021", "08/08/2021"], image: '/imgs/moonrise.jpg', city: "Baltimore, MD")
+
+
 
 r1 = Review.create(stars: 5, content: "Coachella changed my life!", user: connor, festival: coachella)
 

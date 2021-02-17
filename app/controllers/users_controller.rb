@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+    before_action :authorize, except: [:index, :show, :update]
+
     def index
         users = User.all
         render json: users
@@ -10,28 +12,20 @@ class UsersController < ApplicationController
         render json: user
     end
 
-    def create
-        user = User.create(user_params)
-        if user.valid?
-            payload = {user_id: user.id}
-            token = encode_token(payload)
-            render json: {user: user, jwt: token}
-        else
-            render json: {errors: user.errors.full_messages}, status: not_acceptable
-        end
-        
-    end
-
     def update
         user = User.find(params[:id])
         user.update(user_params)
         render json: user
     end
 
+    def autologin
+        render json: @user
+    end
+
     private
 
     def user_params
-        params.permit(:username, :password_digest, :email, :avatar)
+        params.permit(:username, :password, :email, :avatar)
     end
 
 end
