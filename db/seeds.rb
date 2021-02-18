@@ -30,7 +30,7 @@ ultra = Festival.create(name: "Ultra Music Festival", dates: ["03/20/2020", "03/
 new_orleans_jazz = Festival.create(name: "New Orleans Jazz Fest", dates: ["04/23/2020", "05/03/2020"], image: "/imgs/orleans.jpeg", city: "New Orleans, MY")
 electric_zoo = Festival.create(name: "Electric Zoo", dates: ["08/30/2019", "09/01/2020"], image: "/imgs/ezoo.jpg", city: "New York, NY")
 electric_forest = Festival.create(name: "Electric Forest", dates: ["06/25/2020", "06/28/2020"], image: "/imgs/forest.jpg", city: "Rothbury, MI")
-burning_man = Festival.create(name: "Burning Man", dates: ["08/30/2020" "09/06/2020"], image: "/imgs/burning.jpg", city: "Black Rock Desert, NV")
+burning_man = Festival.create(name: "Burning Man", dates: ["08/30/2020", "09/06/2020"], image: "/imgs/burning.jpg", city: "Black Rock Desert, NV")
 iii_points = Festival.create(name: "III points", dates: ["05/01/2020", "05/02/2020"], image: "/imgs/iii.jpg", city: "Miami, FL")
 firefly = Festival.create(name: "Firefly", dates: ["06/18/2020", "06/21/2020"], image: "/imgs/firefly.jpeg", city: "Dover, DE")
 desert_daze = Festival.create(name: "Desert Daze", dates: ["10/08/2020", "10/11/2020"], image: "/imgs/desert.png", city: "Moreno Beach, CA")
@@ -81,3 +81,5 @@ p7 = Post.create(image: '/imgs/festfriend7.jpeg', user: jallen, festival: coache
 p8 = Post.create(image: '/imgs/festfriend8.jpeg', user: sara, festival: governors_ball)
 p9 = Post.create(image: '/imgs/festfriend9.jpeg', user: bryn, festival: beyond_wonderland)
 p10 = Post.create(image: '/imgs/festfriend10.jpeg', user: jallen, festival: acl)
+
+f1 = Favorite.create(user: connor, festival: coachella)
