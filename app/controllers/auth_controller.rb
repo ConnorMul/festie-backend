@@ -3,7 +3,7 @@ class AuthController < ApplicationController
     def login
         user = User.find_by(username: params[:username])
             if user && user.authenticate(params[:password])
-                secret = ENV['JWT_SECRET_KEY']
+                secret = Rails.applcation.secrets.secret_key_base
                 token = JWT.encode({ user_id: user.id }, secret, 'HS256')
                 render json: { user: UserSerializer.new(user), token: token}
             else
@@ -22,7 +22,7 @@ class AuthController < ApplicationController
             user_params_new[:avatar] = imageUploaded["url"]
             user = User.create(user_params_new)
             if user.valid?
-                secret = ENV['JWT_SECRET_KEY']
+                secret = Rails.applcation.secrets.secret_key_base
                 token = JWT.encode({ user_id: user.id }, secret, 'HS256')
                 render json: {user: user, token: token }, status: :created
             else 
