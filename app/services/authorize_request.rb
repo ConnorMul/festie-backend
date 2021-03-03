@@ -12,7 +12,8 @@ class AuthorizeRequest
     attr_reader :headers
 
     def decoded_token
-      JWT.decode(auth_token, Rails.application.secrets.secret_key_base, true, { algorthim: 'HS256' })[0]
+      secret = ENV['JWT_SECRET_KEY']
+      JWT.decode(auth_token, secret, true, { algorthim: 'HS256' })[0]
     rescue
       nil
     end
