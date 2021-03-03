@@ -9,21 +9,7 @@ class AuthController < ApplicationController
             else
                 render json: { failure: "Invalid Username or Password" }
             end
-        # user = User.first
-        # render json: user
     end
-
-
-    # if params[:image].instance_of?(String) || params[:image].nil?
-    #     post = Post.create!(post_params)
-    #     render json: post
-    # else
-    #     imageUploaded = Cloudinary::Uploader.upload(params[:image])
-    #     post_params_new = post_params
-    #     post_params_new[:image] = imageUploaded["url"]
-    #     post = Post.create!(post_params_new)
-    #     render json: post
-    # end
 
     def signup
         auth_params = params.permit(:username, :password, :email, :avatar)
