@@ -6,7 +6,7 @@ class AuthController < ApplicationController
                 secret = ENV["SECRET_KEY_BASE"]
                 token = JWT.encode({ user_id: user.id }, secret, 'HS256')
                 
-                render json: { user: UserSerializer.new(user), token: token}
+                render json: { user: user, token: token}
             else
                 render json: { failure: "Invalid Username or Password" }
             end
