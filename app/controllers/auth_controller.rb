@@ -3,7 +3,7 @@ class AuthController < ApplicationController
     def login
         user = User.find_by(username: params[:username])
             if user && user.authenticate(params[:password])
-                secret = Rails.appliation.secrets.secret_key_base
+                secret = ENV['SECRET_KEY']
                 token = JWT.encode({ user_id: user.id }, secret, 'HS256')
                 render json: { user: UserSerializer.new(user), token: token}
             else
