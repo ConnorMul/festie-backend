@@ -22,7 +22,7 @@ class AuthController < ApplicationController
             user_params_new[:avatar] = imageUploaded["url"]
             user = User.create(user_params_new)
             if user.valid?
-                secret = ENV[JWT_SECRET_KEY]
+                secret = ENV['SECRET_KEY_BASE']
                 token = JWT.encode({ user_id: user.id }, secret, 'HS256')
                 render json: {user: user, token: token }, status: :created
             else 
